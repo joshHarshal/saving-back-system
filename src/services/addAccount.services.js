@@ -39,6 +39,19 @@ export const fetchUsers = async () => {
   return response.data;
 };
 
+//getting customer by first name.
+export const fetchUserByFirstName = async (data) => {
+  const token = localStorage.getItem("authToken");
+  const response = await axios.get(
+    `http://localhost:3000/users/search_customer?name=${data.name}`,
+    {
+      headers: { Authorization: token },
+    }
+  );
+
+  return response.data;
+};
+
 export const fetchUser = async (userId) => {
   const token = localStorage.getItem("authToken");
   const response = await axios.get(`http://localhost:3000/users/${userId}`, {

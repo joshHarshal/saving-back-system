@@ -3,6 +3,7 @@ import { useMutation, useQuery } from "react-query";
 import { useParams } from "react-router-dom";
 import { getAccountDetailsOfUser } from "../../customerServices/customerServices";
 import { useMakeTransaction } from "../../hooks/user.hooks";
+import Navbar from "../navbar";
 
 const NewTransaction = (props) => {
   const customer_id = props.user_AccountId;
@@ -35,8 +36,13 @@ const NewTransaction = (props) => {
     console.log("transaction", transaction);
   };
 
+  const navbarContent = {
+    person: "Customer",
+  };
+
   return (
     <div>
+      <Navbar navbarContent={navbarContent} />
       <div>
         <div className="create">
           <h2>User Details</h2>

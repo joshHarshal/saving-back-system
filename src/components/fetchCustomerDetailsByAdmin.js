@@ -3,6 +3,7 @@ import { useQuery } from "react-query";
 import { useNavigate, useParams } from "react-router-dom";
 import { getDetailsOfCustomer } from "../customerServices/customerServices";
 import CustomerDetails from "./customerComponents/showCustomerDetails";
+import Navbar from "./navbar";
 
 const FetchCustomerDetailsByAdmin = () => {
   const { id } = useParams();
@@ -16,8 +17,13 @@ const FetchCustomerDetailsByAdmin = () => {
   if (isLoading) {
     return <div>Loading...</div>;
   }
+
+  const navbarContent = {
+    person: "Admin",
+  };
   return (
     <div>
+      <Navbar navbarContent={navbarContent} />
       <CustomerDetails data={data} />
     </div>
   );

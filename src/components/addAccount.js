@@ -2,6 +2,7 @@ import React from "react";
 import { Field, Form, Formik, FormikProps } from "formik";
 import { useNavigate, useParams } from "react-router-dom";
 import { useAddAccount } from "../hooks/addAccount.hooks";
+import Navbar from "./navbar";
 
 const AddAccount = () => {
   const navigate = useNavigate();
@@ -17,9 +18,15 @@ const AddAccount = () => {
     mutate(account);
     navigate("/customerlist");
   };
+
+  const navbarContent = {
+    person: "Admin",
+  };
   return (
     <>
-      <h1>Add user Account Details</h1>
+      <Navbar navbarContent={navbarContent} />
+
+      <h1>Transaction of User by Admin:</h1>
 
       <Formik
         initialValues={{

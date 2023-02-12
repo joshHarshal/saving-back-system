@@ -21,20 +21,22 @@ const Body = (props) => {
   };
   return (
     <>
-      <button
-        className="btn info"
-        onClick={() => {
-          handleCustomerList();
-        }}
-      >
-        {customerList}
-      </button>{" "}
-      <button className="btn success" onClick={() => handleSignUp()}>
-        {addCustomer}
-      </button>
-      <button className="btn info" onClick={() => handleAllUserAccounts()}>
-        {getAllAccounts}
-      </button>
+      <div className="btn" back>
+        <button
+          className="btn info"
+          onClick={() => {
+            handleCustomerList();
+          }}
+        >
+          {customerList}
+        </button>{" "}
+        <button className="btn success" onClick={() => handleSignUp()}>
+          {addCustomer}
+        </button>
+        <button className="btn info" onClick={() => handleAllUserAccounts()}>
+          {getAllAccounts}
+        </button>
+      </div>
     </>
   );
 };

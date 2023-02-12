@@ -40,9 +40,9 @@
 /* for login.css.......................................*/
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
 
-body {
-  background: linear-gradient(90deg, #b7a79d 0%, #95b3b3 100%);
-}
+/* body {
+  background: linear-gradient(90deg, #b1a49d 0%, #d6f1f1 100%);
+} */
 
 .login {
   width: 360px;
@@ -54,7 +54,7 @@ body {
 .form {
   position: relative;
   z-index: 1;
-  background: #ffffff;
+  background: #e1ded3;
   border-radius: 10px;
   max-width: 360px;
   margin: 0 auto 100px;
@@ -117,7 +117,7 @@ body {
 /*for nav.css............................*/
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #333;
+  background-color: rgb(230, 130, 130);
   overflow: hidden;
 }
 
@@ -144,3 +144,7 @@ body {
 }
 
 /*..........................................................*/
+
+.topnav-right {
+  float: right;
+}

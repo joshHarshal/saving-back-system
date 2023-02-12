@@ -1,7 +1,6 @@
 import React from "react";
 
 const ShowAllAccounts = (props) => {
-  console.log(props.data, "prprprp");
   const user = props.data;
 
   const tableRowData = user?.map((user) => (

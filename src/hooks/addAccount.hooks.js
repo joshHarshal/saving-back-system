@@ -8,6 +8,7 @@ import {
   deleteUser,
   fetchCustmerAccountInfo,
   fetchUser,
+  fetchUserByFirstName,
   fetchUsers,
 } from "../services/addAccount.services";
 
@@ -29,6 +30,11 @@ export const useDeleteUser = (data) => useMutation(deleteUser, data);
 
 export const useFetchAllCustomersInfo = () => {
   return useQuery("users", fetchUsers);
+};
+
+//search by first name
+export const useFetchCustomerByFirstName = (data) => {
+  return useQuery("users", () => fetchUserByFirstName(data));
 };
 
 export const useFetchSingleCustomerInfo = () => {

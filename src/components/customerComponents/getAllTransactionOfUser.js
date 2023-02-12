@@ -4,6 +4,7 @@ import { useQuery } from "react-query";
 import { Form, useParams } from "react-router-dom";
 import { Input } from "reactstrap";
 import { getAllTransactionsOfUser } from "../../customerServices/customerServices";
+import Navbar from "../navbar";
 
 const GetAllTransactionOfUser = () => {
   const { id } = useParams();

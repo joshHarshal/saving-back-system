@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import * as Yup from "yup";
 import { token } from "../hooks/useToken";
+import Navbar from "./navbar";
 
 //   const navigate = useNavigate();
 //   navigate("/addAccount");
@@ -53,8 +54,13 @@ const AddCustomer = () => {
     mutate(users);
   };
 
+  const navbarContent = {
+    person: "Admin",
+  };
+
   return (
     <>
+      <Navbar navbarContent={navbarContent} />
       {/* Wrapping form inside formik tag and passing our schema to validationSchema prop */}
       <Formik
         validationSchema={schema}

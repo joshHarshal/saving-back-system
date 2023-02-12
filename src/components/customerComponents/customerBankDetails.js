@@ -2,6 +2,7 @@ import React from "react";
 import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
 import { getAccountDetailsOfUser } from "../../customerServices/customerServices";
+import Navbar from "../navbar";
 import NewTransaction from "./newTransaction";
 
 const CustomerBankDetails = () => {
@@ -15,8 +16,14 @@ const CustomerBankDetails = () => {
   }
   console.log("user account details", data);
   console.log("user account id=======>", data.id);
+
+  const navbarContent = {
+    person: "Customer",
+  };
+
   return (
     <div>
+      <Navbar navbarContent={navbarContent} />
       <div className="create">
         <h2>User Details</h2>
         <form>
