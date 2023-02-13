@@ -29,7 +29,6 @@ const Login = () => {
     const users = {
       user: values,
     };
-    console.log(users);
 
     try {
       const response = await axiosInstance.post(LOGIN_URL, users, {

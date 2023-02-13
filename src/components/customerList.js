@@ -1,18 +1,11 @@
-import axios from "axios";
 import { useState } from "react";
-import { useQuery } from "react-query";
-import { Route, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from "reactstrap";
-import { getDetailsOfCustomer } from "../customerServices/customerServices";
 import {
   useDeleteUser,
   useFetchAllCustomersInfo,
   useFetchCustomerByFirstName,
-  useFetchSingleCustomerInfo,
 } from "../hooks/addAccount.hooks";
-import { useUpdateUser } from "../hooks/user.hooks";
-import { fetchUsers } from "../services/addAccount.services";
-import GetCustomerByFirstName from "./getCustomerByFirstName";
 import Navbar from "./navbar";
 
 const CustomerList = () => {
@@ -24,12 +17,12 @@ const CustomerList = () => {
   const {
     isLoading: isUserLoading,
     data: userData,
-    status,
     refetch: refetchUsers,
   } = useFetchAllCustomersInfo();
 
-  const { data: findByName, refetch: findByFirstName } =
-    useFetchCustomerByFirstName({ name: first_name });
+  const { refetch: findByFirstName } = useFetchCustomerByFirstName({
+    name: first_name,
+  });
 
   const { mutate: deleteUser } = useDeleteUser();
   const handleDeleteUser = (userId) => {
@@ -58,7 +51,6 @@ const CustomerList = () => {
   const tableRowData = !isUserLoading ? (
     userData?.map((user) => (
       <tr key={user.id}>
-        {/* <h2>{user.first_name}</h2> */}
         <th scope="row">{user.id}</th>
         <td>{user.first_name}</td>
         <td>{user.last_name}</td>
