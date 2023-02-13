@@ -1,6 +1,7 @@
 import { width } from "@mui/system";
 import { QueryClient, useQueryClient } from "react-query";
 import { useNavigate } from "react-router-dom";
+import Footer from "../../Footer/footer";
 
 const CustomerBody = (props) => {
   const {
@@ -50,11 +51,18 @@ const CustomerBody = (props) => {
       </div>
       <div className="customer-img">
         <img
-          style={{ height: 600, width: 1000, marginLeft: 230, marginTop: 20 }}
+          style={{
+            height: 600,
+            width: 1000,
+            marginLeft: 230,
+            marginTop: 20,
+            marginBottom: 30,
+          }}
           src="https://www.planetcompliance.com/wp-content/uploads/2021/05/Banking.jpg"
           alt=""
         />
       </div>
+      <Footer />
     </div>
   );
 };

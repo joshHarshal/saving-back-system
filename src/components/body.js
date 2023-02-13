@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import Footer from "../Footer/footer";
 import Login from "./login";
 
 // const formType = {
@@ -40,6 +41,7 @@ const Body = (props) => {
       <div className="man-img">
         <img style={{ height: 700 }} src="./assets/images/man.png" alt="" />
       </div>
+      <Footer />
     </>
   );
 };
