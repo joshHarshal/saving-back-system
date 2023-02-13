@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { useMutation, useQuery } from "react-query";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { getAccountDetailsOfUser } from "../../customerServices/customerServices";
 import { useMakeTransaction } from "../../hooks/user.hooks";
 import Navbar from "../navbar";
 
 const NewTransaction = (props) => {
+  const navigate = useNavigate();
   const customer_id = props.user_AccountId;
-  //   console.log("new Transaction account id", customer_id);
   const { id } = useParams();
   const [details, setDetails] = useState("Netbanking");
   const [transaction_type, setTransaction_Type] = useState("");
@@ -33,7 +33,7 @@ const NewTransaction = (props) => {
     };
 
     makeTransaction(transaction);
-    console.log("transaction", transaction);
+    navigate(`/customerDashboard/${id}`);
   };
 
   const navbarContent = {

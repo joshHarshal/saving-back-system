@@ -30,18 +30,21 @@ const GetAllTransactionOfUser = () => {
 
   return (
     <div>
-      <table className="table">
-        <thead className="thead-dark"></thead>
-        <tr>
-          <th scope="col">Transaction Id</th>
-          <th scope="col">Mode</th>
-          <th scope="col">Transaction Type</th>
-          <th scope="col">Amount</th>
-          <th scope="col">Balance</th>
-          <th scope="col">Created At</th>
-        </tr>
-        <tbody>{result}</tbody>
-      </table>
+      <div className="container mt-3">
+        <div className="table-responsive">
+          <table className="table table-bordered">
+            <tr>
+              <th scope="col">Transaction Id</th>
+              <th scope="col">Mode</th>
+              <th scope="col">Transaction Type</th>
+              <th scope="col">Amount</th>
+              <th scope="col">Balance</th>
+              <th scope="col">Created At</th>
+            </tr>
+            <tbody>{result}</tbody>
+          </table>
+        </div>
+      </div>
     </div>
   );
 };

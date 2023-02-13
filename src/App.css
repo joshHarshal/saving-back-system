@@ -54,7 +54,7 @@
 .form {
   position: relative;
   z-index: 1;
-  background: #e1ded3;
+  background: rgb(229, 195, 132);
   border-radius: 10px;
   max-width: 360px;
   margin: 0 auto 100px;
@@ -117,6 +117,8 @@
 /*for nav.css............................*/
 /* Add a black background color to the top navigation */
 .topnav {
+  display: flex; /* display logout right side*/
+  justify-content: space-between; /* display logout right side*/
   background-color: rgb(230, 130, 130);
   overflow: hidden;
 }
@@ -147,4 +149,8 @@
 
 .topnav-right {
   float: right;
+}
+
+.man-img {
+  margin-left: 800px;
 }

@@ -29,13 +29,16 @@ const Body = (props) => {
           }}
         >
           {customerList}
-        </button>{" "}
+        </button>
         <button className="btn success" onClick={() => handleSignUp()}>
           {addCustomer}
         </button>
         <button className="btn info" onClick={() => handleAllUserAccounts()}>
           {getAllAccounts}
         </button>
+      </div>
+      <div className="man-img">
+        <img style={{ height: 700 }} src="./assets/images/man.png" alt="" />
       </div>
     </>
   );
